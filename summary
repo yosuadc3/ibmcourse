@@ -21,6 +21,7 @@ airflow, kafka
 
 tools seldom to deployment
 prometheus for monitoring
+api based model machine learning
 
 Machine learning models can be divided into three basic classes: supervised learning, unsupervised learning, and reinforcement learning.
 1. Supervised learning is one of the most commonly used type of machine learning models.
@@ -51,3 +52,42 @@ It refers to a general set of models and techniques that tries to loosely emulat
 It is commonly used to analyze natural language, both spoken and text, as well as images, audio, and video, to forecast time series data and much more.
 Deep learning has had a lot of recent success in these and other areas and is therefore becoming an increasingly popular and important tool for data science.
 Deep learning typically requires very large data sets of labeled data to train a model, is compute-intensive, and usually requires special purpose hardware to achieve acceptable training times.
+
+data science methodology
+problem to approach
+	1. business understanding = what is the problem that you are trying to solve
+	2. analytic approach = how can you use data to answer the question
+working with the data
+	3. data requirement = what data you need to answer the question
+	4. data collection = data source and how to get data
+	5. data understanding = is the data representative of the problem to be solved
+	6. data preparation = what additional work is required before data ready to use
+deriving the answer
+	7. modelling = what visualised tools need
+	8. evaluation = does the model can really answer or need adjust
+	9. deployment = can we practice that model
+	10. feedback = does it produce constructive feedback
+
+business understanding => clarify problem, asking important constraint scope
+reduce cost => to efficient or to increase profit
+goal => provide quality without increasing cost
+objective => review process to identify inefficiencies
+
+analytic approach
+desrciptive = current status
+diagnostic (statistical anaylsis) = what and why
+predictive (forecasting) = what if continue, what will happen next
+prescriptive = how we solve
+
+if question is determine probability => predictive
+if to show relationship = descriptive
+if require yes/no answer = classification
+
+SOMETIMES WANTED DATA BUT NOT AVAILABLE CAN BE DEFFERED IF MODEL GIVE GOOD RESULT
+
+UNDERSTANDING THE DATA
+univariate statistics = hearst, univariate, mean med min max std dev
+pairwise correlation = highly correlated must be distinct to take for feature
+histogram to understand the distribution
+
+data quality => does missing mean anything
