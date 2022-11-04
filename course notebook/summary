@@ -1,0 +1,202 @@
+summary
+
+How Big Data is defined by the Vs: Velocity, Volume, Variety, Veracity, and Value.
+
+statistic probability basic
+programming
+statistical distribution
+
+structured unstructured
+domain specific
+presenting & storytelling
+company dna
+curiosity
+
+statistical algorithm
+ml algorithm
+store large amounts of data
+manipulate and apply algorithm
+hadoop & spark for big data
+airflow, kafka
+
+tools seldom to deployment
+prometheus for monitoring
+api based model machine learning
+
+Machine learning models can be divided into three basic classes: supervised learning, unsupervised learning, and reinforcement learning.
+1. Supervised learning is one of the most commonly used type of machine learning models.
+provides input data and the correct outputs.
+The model tries to identify relationships and dependencies between the input data and the correct output.
+Generally speaking, supervised learning is used to solve regression and classification problems.
+Let’s look at an example for each problem type: Regression models are used to predict a numeric, or “real," value.
+For example, given information about past home sales, such as geographic location, size, number of bedrooms, and sales price, you can train a model to predict the estimated sales price for other homes with similar characteristics.
+Classification models are used to predict whether something belongs to a category, or “class." For example, given a set of emails along with a designation of whether or not they are considered spam, an algorithm can be trained to identify unsolicited emails.
+
+2. In unsupervised learning, the data is not labelled by a human.
+The models must analyze the data and try to identify patterns and structure within the data based only on the characteristics of the data itself.
+Clustering and anomaly detection are two examples of this learning style.
+Clustering models are used to divide each record of a data set into one of a small number of similar groups.
+An example of a clustering model could be providing purchase recommendations for an e-commerce store based on past shopping behavior and the content of a shopping basket.
+Anomaly detection identifies outliers in a data set, such as fraudulent credit card transactions or suspicious online log-in attempts.
+
+3. The third type of learning, reinforcement learning, is loosely based on the way human beings and other organisms learn.
+Think about a mouse in a maze.
+If the mouse gets to the end of the maze it gets a piece of cheese.
+This is the “reward” for completing a task.
+The mouse learns – through trial and error – how to get through the maze to get as much cheese as it can.
+In a similar way, a reinforcement learning model learns the best set of actions to take, given its current environment, in order to get the most reward over time.
+This type of learning has recently been very successful in beating the best human players in games such as go, chess, and popular strategy video games.
+
+4. Deep learning is a specialized type of machine learning.
+It refers to a general set of models and techniques that tries to loosely emulate the way the human brain solves a wide range of problems.
+It is commonly used to analyze natural language, both spoken and text, as well as images, audio, and video, to forecast time series data and much more.
+Deep learning has had a lot of recent success in these and other areas and is therefore becoming an increasingly popular and important tool for data science.
+Deep learning typically requires very large data sets of labeled data to train a model, is compute-intensive, and usually requires special purpose hardware to achieve acceptable training times.
+
+data science methodology
+problem to approach
+	1. business understanding = what is the problem that you are trying to solve
+	2. analytic approach = how can you use data to answer the question
+working with the data
+	3. data requirement = what data you need to answer the question
+	4. data collection = data source and how to get data
+	5. data understanding = is the data representative of the problem to be solved
+	6. data preparation = what additional work is required before data ready to use
+deriving the answer
+	7. modelling = what visualised tools need
+	8. evaluation = does the model can really answer or need adjust
+	9. deployment = can we practice that model
+	10. feedback = does it produce constructive feedback
+
+business understanding => clarify problem, asking important constraint scope
+reduce cost => to efficient or to increase profit
+goal => provide quality without increasing cost
+objective => review process to identify inefficiencies
+
+analytic approach
+desrciptive = current status
+diagnostic (statistical anaylsis) = what and why
+predictive (forecasting) = what if continue, what will happen next
+prescriptive = how we solve
+
+if question is determine probability => predictive
+if to show relationship = descriptive
+if require yes/no answer = classification
+
+SOMETIMES WANTED DATA BUT NOT AVAILABLE CAN BE DEFFERED IF MODEL GIVE GOOD RESULT
+
+UNDERSTANDING THE DATA
+univariate statistics = hearst, univariate, mean med min max std dev
+pairwise correlation = highly correlated must be distinct to take for feature
+histogram to understand the distribution
+
+data quality => does missing mean anything
+
+head(), tail()
+dtypes
+describe(include="all")
+info()
+casting using .astype("datatype")
+
+missing value[
+	'check data source / cross check',
+	drop one row / drop one cell
+	.replace() by average / frequency / other function(common sense)
+]
+df.dropna(axis=0 | 1) 0=row; 1=column inplace=true to reasign back variable
+
+data normalization = make data into range / scale
+simple feature scaling = data/max(data)
+minmax = (data-.min())/(.max()-.min())
+zscore = data-(.mean())/.std()
+
+binning = grouping data / labelling
+numpy.linspace(mix,max,bin)
+low|medium|high = 4 bins
+df collumn = pd.cut(collumn,bins,labels,include_lowest=true)
+
+categorial string data to numeric using concept flag => distinct then create flag
+pd.get_dummies(column)
+
+determine if model is good [
+ do the predicted value make sense,
+ visualization
+ numerical measure
+ comparing models
+]
+
+regression / estimation = continious values
+classification = predict class / category
+clustering = finding structure data / cluster / group
+associations = frequent co occuring item / events
+anomaly detection
+sequence mining = predict next event
+dimension reduction = reduce size data
+density estimation
+market basket analysis
+recomendation system 
+
+regression validation metric = MAE, MSE, RMSE, RAE, RSE; R^2 = 1 - metric
+
+classification algo = decision tree, naive bayes, knn, neural network, svm, 
+
+classification validation = jaccard index, f1-score(confusion matrix)
+
+
+todo
+a. determine price of each launch
+b. will falcon 9 survive first stage (reusable)
+c. 
+
+1.request parse to get request
+2.data = pd.json_normalize(response.json())
+3.filter only falcon 9
+HERE =================
+4.replace none in PayloadMass with the mean
+5.webscrap
+6. fill null
+outcome [
+	0 = true asds
+	3 = false asds
+]
+7 landing outcome = 1 if  true asds
+8. landing outcome = 0 if false esds
+9. calculate number of launches on each site
+10. calculate number and occurence of each orbit
+orbit = [
+	leo, gto, meo, heo	
+]
+11. calculate number and occurence of mission outcome per orbit type 
+12. create landing outcome label (1/0)
+13. use sql
+14. eda visualize relationship between different param
+15. visualize launch success yearly trend
+16. dummy variable to categorical columns
+17. mark launch sites in folium
+18. mark success failed launches for each site
+19. calculate dinstance between launch site to its proximities
+20. add launch site dropdown componen
+21. callback function to render the required piechart
+22. add range slider to payload
+23. add callback to render scatter plot
+24. build predictive analysis logistic regression, svm, decission tree classifier, k nearest neighbors => confusion matrix
+25. standarized the data
+26. split to train and test
+27. find best hyper parameter on each model
+28. calculate accuracy test data
+
+Uploaded the URL of your GitHub repository including all the completed notebooks and Python files (1 pt)
+Uploaded your completed presentation in PDF format (1 pt)
+Completed the required Executive Summary slide (1 pt)
+Completed the required Introduction slide (1 pt)
+Completed the required data collection and data wrangling methodology related slides (1 pt)
+Completed the required EDA and interactive visual analytics methodology related slides (3 pts)
+Completed the required predictive analysis methodology related slides (1 pt)
+Completed the required EDA with visualization results slides (6 pts)
+Completed the required EDA with SQL results slides (10 pts)
+Completed the required interactive map with Folium results slides (3 pts)
+Completed the required Plotly Dash dashboard results slides (3 pts)
+Completed the required predictive analysis (classification) results slides (6 pts)
+Completed the required Conclusion slide (1 pts)
+Applied your creativity to improve the presentation beyond the template (1 pts)
+Displayed any innovative insights (1 pts)
